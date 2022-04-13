@@ -14,7 +14,7 @@ final class NomicsAPICaller {
     var top10 = [Crypto]()
     
     private struct Constants {
-        static let apiKey = "65d826b99ad9177574292332ff03b21ca80d24b6"
+        static let apiKey = "57d23447c189607759103d4bddb577e6d0085189"
         static let assetsEndPoint = "https://api.nomics.com/v1/currencies/"
     }
     
@@ -23,7 +23,7 @@ final class NomicsAPICaller {
     }
     
     public func getAllCryptoData(completion: @escaping (Result<[Crypto], Error>) -> Void) {
-        guard let url = URL(string: Constants.assetsEndPoint + "ticker?key=" + Constants.apiKey + "&ids=BTC,ETH,XRP&interval=1h,30d&convert=USD&platform-currency=ETH&per-page=100&page=1" ) else {
+        guard let url = URL(string: Constants.assetsEndPoint + "ticker?key=" + Constants.apiKey + "&ids=BTC,ETH,XRP&interval=1h,1d&convert=USD&platform-currency=ETH&per-page=50&page=1" ) else {
             return
             /*curl "https://api.nomics.com/v1/currencies/ticker?key=your-key-here&ids=BTC,ETH,XRP&interval=1d,30d&convert=EUR&platform-currency=ETH&per-page=100&page=1" */
         }

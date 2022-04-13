@@ -20,45 +20,51 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CryptoTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CryptoTableViewCell" id="mfg-jb-KJi" customClass="CryptoTableViewCell" customModule="Cryptohelper" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CryptoTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CryptoTableViewCell" rowHeight="70" id="mfg-jb-KJi" customClass="CryptoTableViewCell" customModule="Cryptohelper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mfg-jb-KJi" id="4CI-Hn-ujc">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="774-vL-0oW">
-                                                    <rect key="frame" x="30" y="11" width="45" height="22"/>
+                                                    <rect key="frame" x="70" y="7" width="45" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNs-j4-vQL">
-                                                    <rect key="frame" x="345" y="11" width="39" height="22"/>
+                                                    <rect key="frame" x="365" y="25" width="39" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" systemColor="systemGreenColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symbol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BG8-12-baj">
-                                                    <rect key="frame" x="102" y="10" width="58" height="21.5"/>
+                                                    <rect key="frame" x="70" y="43" width="58" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" systemColor="systemGray2Color"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kc0-Kg-yRd">
+                                                    <rect key="frame" x="15" y="10" width="47" height="50"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="774-vL-0oW" firstAttribute="top" secondItem="4CI-Hn-ujc" secondAttribute="topMargin" id="ZIe-N6-z50"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="BNs-j4-vQL" secondAttribute="trailing" constant="10" id="ZTG-Pd-Zhn"/>
-                                                <constraint firstItem="774-vL-0oW" firstAttribute="firstBaseline" secondItem="BNs-j4-vQL" secondAttribute="firstBaseline" id="aBt-Kl-8ei"/>
-                                                <constraint firstItem="BG8-12-baj" firstAttribute="top" secondItem="4CI-Hn-ujc" secondAttribute="topMargin" constant="-1" id="ci6-Yq-PR0"/>
-                                                <constraint firstItem="774-vL-0oW" firstAttribute="baseline" secondItem="BNs-j4-vQL" secondAttribute="baseline" id="fTH-lN-MgW"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="BG8-12-baj" secondAttribute="bottom" constant="1.5" id="gXz-hY-RBc"/>
-                                                <constraint firstItem="774-vL-0oW" firstAttribute="centerY" secondItem="4CI-Hn-ujc" secondAttribute="centerY" id="jD7-hm-Ae2"/>
-                                                <constraint firstItem="774-vL-0oW" firstAttribute="leading" secondItem="4CI-Hn-ujc" secondAttribute="leadingMargin" constant="10" id="km4-Ai-cAI"/>
-                                                <constraint firstItem="BG8-12-baj" firstAttribute="leading" secondItem="774-vL-0oW" secondAttribute="trailing" constant="27" id="rOS-cD-M5d"/>
+                                                <constraint firstItem="774-vL-0oW" firstAttribute="leading" secondItem="4CI-Hn-ujc" secondAttribute="leading" constant="70" id="6O2-6R-qoI"/>
+                                                <constraint firstItem="kc0-Kg-yRd" firstAttribute="top" secondItem="4CI-Hn-ujc" secondAttribute="top" constant="10" id="STo-38-Coh"/>
+                                                <constraint firstItem="BG8-12-baj" firstAttribute="leading" secondItem="4CI-Hn-ujc" secondAttribute="leading" constant="70" id="fs3-qb-k5n"/>
+                                                <constraint firstItem="BNs-j4-vQL" firstAttribute="centerY" secondItem="4CI-Hn-ujc" secondAttribute="centerY" id="i5E-ju-gjK"/>
+                                                <constraint firstItem="kc0-Kg-yRd" firstAttribute="leading" secondItem="4CI-Hn-ujc" secondAttribute="leading" constant="15" id="lvP-0P-BXh"/>
+                                                <constraint firstAttribute="bottom" secondItem="kc0-Kg-yRd" secondAttribute="bottom" constant="10" id="n5i-Zz-KRo"/>
+                                                <constraint firstItem="BG8-12-baj" firstAttribute="top" secondItem="774-vL-0oW" secondAttribute="bottom" constant="15" id="nNc-y9-0H6"/>
+                                                <constraint firstItem="BNs-j4-vQL" firstAttribute="trailing" secondItem="4CI-Hn-ujc" secondAttribute="trailingMargin" constant="10" id="oa2-Ju-fcM"/>
+                                                <constraint firstItem="774-vL-0oW" firstAttribute="leading" secondItem="kc0-Kg-yRd" secondAttribute="trailing" constant="8" symbolic="YES" id="tH1-gf-ehf"/>
+                                                <constraint firstItem="774-vL-0oW" firstAttribute="top" secondItem="4CI-Hn-ujc" secondAttribute="top" constant="7" id="tlR-xm-0ji"/>
+                                                <constraint firstAttribute="bottom" secondItem="BG8-12-baj" secondAttribute="bottom" constant="7" id="zqt-8X-Q39"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="logoImage" destination="kc0-Kg-yRd" id="a7S-mj-124"/>
                                             <outlet property="nameLabel" destination="774-vL-0oW" id="eFk-lK-SW0"/>
                                             <outlet property="priceLabel" destination="BNs-j4-vQL" id="urC-kv-ccI"/>
                                             <outlet property="symbolLabel" destination="BG8-12-baj" id="XFA-Wf-Bc7"/>
@@ -122,6 +128,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -15,7 +15,6 @@ class CryptoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -23,7 +22,7 @@ class CryptoViewController: UIViewController {
             switch result {
             case .success(let models):
                 print(models.count)
-                self?.viewModel = models.compactMap({ CryptoTableViewCellViewModel(name: $0.name ?? "", symbol: $0.symbol ?? "", price: $0.price ?? "")
+                self?.viewModel = models.compactMap({ CryptoTableViewCellViewModel(name: $0.name ?? "", symbol: $0.symbol ?? "", price: $0.price ?? "", logoUrl: $0.logoUrl ?? "")
                 })
                 
                 DispatchQueue.main.async {

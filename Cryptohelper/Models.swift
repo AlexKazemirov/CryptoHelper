@@ -12,7 +12,7 @@ struct Crypto: Codable {
     let price: String?
     let symbol: String?
     let name: String?
-    let price_timestamp: String?
+    let logoUrl: String?
 }
 
 /*
