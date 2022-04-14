@@ -15,6 +15,7 @@ class CryptoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -22,7 +23,7 @@ class CryptoViewController: UIViewController {
             switch result {
             case .success(let models):
                 print(models.count)
-                self?.viewModel = models.compactMap({ CryptoTableViewCellViewModel(name: $0.name ?? "", symbol: $0.symbol ?? "", price: $0.price ?? "", image: $0.image ?? "")
+                self?.viewModel = models.compactMap({ CryptoTableViewCellViewModel(name: $0.name ?? "", symbol: $0.symbol ?? "", current_price: $0.current_price ?? 0, image: $0.image ?? "")
                 })
                 
                 DispatchQueue.main.async {
@@ -30,7 +31,7 @@ class CryptoViewController: UIViewController {
                 }
                 //print("Элемент №1 в списке - \(models[0].name!), цена - \(models[0].price!)")
             case .failure(let error):
-                print("bad request")
+                print(error)
             }
         }
     }
