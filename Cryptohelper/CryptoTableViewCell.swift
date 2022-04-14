@@ -11,7 +11,7 @@ struct CryptoTableViewCellViewModel {
     let name: String
     let symbol: String
     let price: String
-    let logoUrl: String
+    let image: String
 }
 
 class CryptoTableViewCell: UITableViewCell {
@@ -33,9 +33,10 @@ class CryptoTableViewCell: UITableViewCell {
     
     func configure(with viewModel: CryptoTableViewCellViewModel) {
         nameLabel.text = viewModel.name
-        symbolLabel.text = viewModel.symbol
+        symbolLabel.text = viewModel.symbol.uppercased()
         priceLabel.text = viewModel.price
-        if let url = URL(string: "https://cryptoicons.org/api/icon/\(viewModel.symbol.lowercased())/50") {
+        if let url = URL(string: "\(viewModel.image)"/*"https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png"*/ ) {
+        /*"https://cryptoicons.org/api/icon/\(viewModel.symbol.lowercased())/200") {*/
             let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, _ in
                 if let data = data {
                     DispatchQueue.main.async {

@@ -22,7 +22,7 @@ class CryptoViewController: UIViewController {
             switch result {
             case .success(let models):
                 print(models.count)
-                self?.viewModel = models.compactMap({ CryptoTableViewCellViewModel(name: $0.name ?? "", symbol: $0.symbol ?? "", price: $0.price ?? "", logoUrl: $0.logoUrl ?? "")
+                self?.viewModel = models.compactMap({ CryptoTableViewCellViewModel(name: $0.name ?? "", symbol: $0.symbol ?? "", price: $0.price ?? "", image: $0.image ?? "")
                 })
                 
                 DispatchQueue.main.async {
