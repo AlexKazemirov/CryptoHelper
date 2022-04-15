@@ -51,6 +51,10 @@ extension CryptoViewController: UITableViewDataSource, UITableViewDelegate {
         cell.configure(with: viewModel[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
 
     
 }
